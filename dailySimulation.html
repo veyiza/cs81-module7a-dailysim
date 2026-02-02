@@ -1,49 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Daily Schedule Simulation</title>
-</head>
-<body style="font-family: sans-serif; text-align: center; padding-top: 60px; background-color: #eef;">
+<script>
+  const output = document.getElementById("output");
 
-  <h1>My Simulated Day</h1>
-  <div id="output" style="margin-top: 40px; font-size: 1.5rem;"></div>
+  // Helper function to display events on the page
+  function logEvent(message) {
+    const p = document.createElement("p");
+    p.textContent = message;
+    output.appendChild(p);
+  }
 
-  <script>
-    const output = document.getElementById("output");
-    
-    
-    // Twistadds random mood for the day
-    const moods = ["😄", "😴", "😎", "🤔"];
-    const randomMood = moods[Math.floor(Math.random() * moods.length)];
+  // Twist: adds random mood for the day
+  const moods = ["😄", "😴", "😎", "🤔"];
+  const randomMood = moods[Math.floor(Math.random() * moods.length)];
 
-    // Activities
-    setTimeout(() => {
-      logEvent("8:00 AM Wake up and check my phone");
-    }, 500);
+  // Activities
+  setTimeout(() => {
+    logEvent(`8:00 AM Wake up and check my phone ${randomMood}`);
+  }, 500);
 
-    setTimeout(() => {
-      logEvent("9:00 AM Chilling and watching youtube ");
-    }, 1000);
+  setTimeout(() => {
+    logEvent("9:00 AM Chilling and watching YouTube");
+  }, 1000);
 
-    setTimeout(() => {
-      logEvent("12:00 PM Eat lunch");
-    }, 1500);
+  setTimeout(() => {
+    logEvent("12:00 PM Eat lunch");
+  }, 1500);
 
-    setTimeout(() => {
-      logEvent("2:00 PM  Play video games");
-    }, 2000);
+  setTimeout(() => {
+    logEvent("2:00 PM Play video games");
+  }, 2000);
 
-    setTimeout(() => {
-      logEvent("5:00 PM  Go out for a walk");
-    }, 2500);
+  setTimeout(() => {
+    logEvent("5:00 PM Go out for a walk");
+  }, 2500);
 
-    setTimeout(() => {
-      logEvent("8:00 PM  Relaxing and listening to music");
-    }, 3000);
+  setTimeout(() => {
+    logEvent("8:00 PM Relaxing and listening to music");
+  }, 3000);
 
-
-  </script>
-
-</body>
-</html>
+  setTimeout(() => {
+    logEvent("11:00 PM Go to sleep 🌙");
+  }, 3500);
+</script>
