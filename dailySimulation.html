@@ -12,6 +12,11 @@
   <script>
     const output = document.getElementById("output");
     
+    
+    // Twistadds random mood for the day
+    const moods = ["😄", "😴", "😎", "🤔"];
+    const randomMood = moods[Math.floor(Math.random() * moods.length)];
+
     // Activities
     setTimeout(() => {
       logEvent("8:00 AM Wake up and check my phone");
